@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.anime.AnimeFragment"
+    android:background="@color/night">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="366dp"
+                android:layout_height="105dp"
+                android:background="@color/night"
+                android:orientation="horizontal"
+                android:padding="@dimen/_8sdp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/sans"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    app:srcCompat="@drawable/logoanimac3" />
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="46dp"
+                    android:layout_height="79dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_recommendations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/sans"
+                android:text="Recommendations"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                app:layout_constraintTop_toBottomOf="@id/ll_header"
+                app:layout_constraintStart_toStartOf="@id/ll_header"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_8sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommendations"
+                android:layout_width="356dp"
+                android:layout_height="255dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:clipToPadding="false"
+                app:layout_constraintStart_toStartOf="@id/tv_recommendations"
+                app:layout_constraintTop_toBottomOf="@id/tv_recommendations" />
+            <TextView
+                android:id="@+id/tv_popular_manga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/sans"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/rv_recommendations"
+                app:layout_constraintStart_toStartOf="@id/rv_recommendations"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:textColor="@color/orange"
+                android:text="Popular Anime"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_now"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_200sdp"
+                app:layout_constraintStart_toStartOf="@id/tv_popular_manga"
+                app:layout_constraintTop_toBottomOf="@id/tv_popular_manga"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

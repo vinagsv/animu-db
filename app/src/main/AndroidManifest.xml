@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vinag.animack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hestialogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/hestialogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AniMack">
+        <activity
+            android:name="com.vinag.animack.ui.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name="com.vinag.animack.ui.activities.SearchAnimeActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+
+        <activity
+            android:name="com.vinag.animack.ui.activities.AnimeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.vinag.animack.ui.activities.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
